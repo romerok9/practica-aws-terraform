@@ -5,9 +5,9 @@ provider "aws" {
 
 resource "aws_instance" "web" {
   count = 2
-  ami = "ami-0ac80df6eff0e70b5"
+  ami = "ami-0dc2d3e4c0f9ebd18"
   instance_type = "t2.micro"
-  
+  key_name = "practica"
   tags = {
     Name = "devops-${count.index}"
   }
